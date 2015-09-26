@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="zh-cn">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title></title>
+    <script type="text/javascript" src="../lib/angular.min.js"></script>
+    <script type="text/javascript" src="controllist.js"></script>
+</head>
+<body>
+
+   <div id="shoppinglist" ng-controller="controllist_items">
+       <div ng-repeat="item in items">
+           <span ng-bind="item.name"></span><input type="text" ng-model="item.quantity"/> <span ng-bind="item.price*item.quantity"></span>
+       </div>
+       <div>总价:<span ng-bind="totalPrice()"></span></div>
+       <div>折扣:<span ng-bind="discountPrice()"></span></div>
+       <div>最终价格:<span ng-bind="finalPrice()"></span></div>
+   </div>
+
+</body>
+</html>
