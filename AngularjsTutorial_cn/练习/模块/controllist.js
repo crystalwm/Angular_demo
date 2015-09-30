@@ -23,7 +23,6 @@ shoppingModule.factory('Items',function(){
     return items;
 });
 
-
 //当Angular 创建ShoppingController 时，它会把$scope对象和刚定义好的Items服务作为参数传递过去
 function ShoppingController($scope,Items){
 
