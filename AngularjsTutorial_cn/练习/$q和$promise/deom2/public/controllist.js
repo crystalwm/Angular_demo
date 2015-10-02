@@ -18,7 +18,7 @@ httpREST.controller('promise',function($q,$http,$scope){
         $scope.name='进度'+data;
     });
 
-/*    $http({
+    $http({
         method:'GET',
         url:'/name'
     }).then(function(res){
@@ -26,6 +26,6 @@ httpREST.controller('promise',function($q,$http,$scope){
     },function(res){
 
         defer.reject(res.data);
-    });*/
+    });
 
 });
