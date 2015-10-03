@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="HttpREST">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../lib/angular.min.js"></script>
+    <script src="../../lib/angular-resource.js"></script>
+    <script src="../controllist.js"></script>
+</head>
+<body>
+<div ng-controller="Card">
+    用户123的id为1的卡片信息：<h3 ng-bind="card_1"></h3>
+    用户123的id为2的卡片信息：<h3 ng-bind="card_2"></h3>
+    <input type="button" ng-click="save1()" value="save_card_1" />
+</div>
+
+</body>
+</html>
