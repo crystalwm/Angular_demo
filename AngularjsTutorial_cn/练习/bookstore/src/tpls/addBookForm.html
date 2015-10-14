@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../framework/bootstrap-3.0.0/css/bootstrap.css">
+</head>
+<body>
+<div class="panel panel-primary">
+    <div class="panel-heading">新增书籍</div>
+    <div class="panel-body">
+        <div class="col-md-6 col-md-offset-3">
+
+            <form action="" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="bookName" class="control-label col-sm-3">书名:</label>
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="最多64个字符" id="bookName" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="bookType" class="control-label col-sm-3">类型:</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" id="bookType">
+                            <option>哲学</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pubDate" class="control-label col-sm-3">出版日期:</label>
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="日期格式YYYY-mm-dd" id="pubDate" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="authors" class="control-label col-sm-3">作者:</label>
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="最多16个字符" id="authors" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ifHasEbook" class="control-label col-sm-3">是否有电子书:</label>
+                    <div class="col-sm-9">
+                        <input type="checkbox" value="" id="ifHasEbook">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-9">
+                        <button class="btn btn-success">保存</button>
+                        <button class="btn btn-primary">取消</button>
+                        <button class="btn">清空表单</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
