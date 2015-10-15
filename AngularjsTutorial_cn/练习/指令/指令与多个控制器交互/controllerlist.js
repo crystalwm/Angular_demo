@@ -25,7 +25,6 @@ appModule.directive('hello',function(){
                  * */
                 scope.$apply(iAttr.howtoload);
             });
-
         }
     }
 })

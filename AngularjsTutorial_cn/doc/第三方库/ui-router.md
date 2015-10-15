@@ -5,7 +5,7 @@
 那么它的父模板就是index.html。
 
 **有三种方法来激活状态**
->1:调用$state.go()方法，这是一个高级的便利方法；
+>1:调用$state.go()方法，这是一个的便利方法；
  2:点击包含ui-sref指令的链接；
  3:导航到与状态相关联的 url。
  
@@ -41,6 +41,11 @@ element.bind("click", function(e) {
 
 **ui.router是基于state(状态)的，而不是url**
 >
+
+**在angularJS中引入ui-router的一般步骤**
+>1：在html页面中引入第三方的库（ui-router）
+2：在angular中依赖第三方的模块`angular.module('app',['ui.router'])`
+3：使用`$stateProvider`提供当不同的state下的时候使用什么样的template。controller去填充`ui-view标签`
 
 ## $stateProvider
 
@@ -298,6 +303,66 @@ html文件通过`href`文件引入
 
 
 
+## `ui.router   module`
+**作用**
+在`ui-router库`中有多个模块，但是这个模块是主要的模块，只需要把这个模块引入`angular`中
+## `ui.router.router   module`
+### `$urlRouterProvider   service`
+
+#### `href(urlMatcher, params, options)`---为UrlMatcher产生一个新的url
+```
+$bob = $urlRouter.href(new UrlMatcher("/about/:person"), {
+  person: "bob"
+});
+// $bob == "/about/bob";
+```
+**作用**
+为`UrlMatcher`编译url。最后的返回值为一个新产生的url
+
+#### `sync()`---继续$locationChangeSuccess的默认行为
+```
+angular.module('app', ['ui.router'])
+  .run(function($rootScope, $urlRouter) {
+    $rootScope.$on('$locationChangeSuccess', function(evt) {
+      // Halt state change from even starting
+      evt.preventDefault();
+      // Perform custom logic
+      var meetsRequirement = ...
+      // Continue with the update and state transition if logic allows
+      if (meetsRequirement) $urlRouter.sync();
+    });
+});
+```
+**作用**
+在地址发生变化的时候会触发$locationChangeSuccess事件。
+如果你希望在满足某些条件下才触发这个事件的话。
+1：阻止`$locationChangeSuccess`的默认行为
+2：添加上一些自己的判断
+3：如果满足一定的要求。执行`$locationChangeSuccess`的默认行为
+
+## `ui.router.state     module`
+### `ui-sref    directive`
+这是一个`属性指令`,为该指令t所在的元素绑定一个`click事件`，当click事件发生的时候，会调用`$state.href()`,修改`路由状态`。
+### `ui-sref-active    directive`
+这个指定不是特别理解，在实际的例子中可能会用到
+### `ui-sref-active-eq    directive`
+这个也不是特别理解，但是应该都是与`ui-sref`指令有关。
+
+### `ui-view     directive`
+**作用**
+告诉`$state`把你的template放在那里。
+
+### `includeByState    filter`
+### `isState    filter`
+### `$state    servie`
+### `$uiViewScroll    service`
+### `$view    service`
+## `ui.router.util    module`
+### `Type    `
+### `UrlMatcher    `
+### `$resolve    service`
+### `$templateFactory    service`
+### `$urlMatcherFactory    service`
 
 
 
@@ -311,4 +376,4 @@ http://bubkoo.com/2014/01/02/angular/ui-router/guide/url-routing/
 https://github.com/angular-ui/ui-router/wiki
 http://www.aichengxu.com/view/44576
 http://sentsin.com/web/1136.html  (源码解析)
-
+http://angular-ui.github.io/ui-router/site/#/api/ui.router

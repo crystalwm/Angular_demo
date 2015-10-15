@@ -8,7 +8,6 @@
 var appModule=angular.module('app',['ui.router']);
 
 appModule.config(function($stateProvider,$urlRouterProvider){
-
     $urlRouterProvider.when("","PageTab");
     $stateProvider.state('PageTabe',{
         url:'/PageTab',
