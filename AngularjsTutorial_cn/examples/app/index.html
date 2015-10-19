@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/main.js"></script>
+</head>
+<body>
+<form ng-controller="StartUpController" >
+    <input type="text" ng-model="f.input" ng-change="ch()" />
+     recommendation:<span ng-bind="f.input*10"></span>
+    <ul>
+        <li ng-repeat="student in students">
+            {{student.name}}+{{$index}}
+        </li>
+    </ul>
+</form>
+<div ng-controller="toggleController">
+    <input type="button" ng-click="ch()" value="显示或隐藏"/>
+    <p ng-show="meauState">显示</p>
+</div>
+
+<table ng-controller="RTC">
+    <tr ng-repeat="res in directory" ng-click="sR($index)" ng-class="{selected: $index==selectedRow}">
+        <td>{{res.name}}</td>
+        <td>{{res.cuisine}}</td>
+    </tr>
+</table>
+
+<div ng-controller="imgController">
+     <img src="src/img/{{imgName}}" />
+</div>
+
+
+</body>
+</html>
