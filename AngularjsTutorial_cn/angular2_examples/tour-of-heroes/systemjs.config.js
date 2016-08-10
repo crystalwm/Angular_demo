@@ -4,7 +4,7 @@
         '@angular': 'node_modules/@angular',
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
         'rxjs': 'node_modules/rxjs',
-        'appmulti':'app'
+        'appmulti':'app/appmultimain'
     };
 
     var packages = {
@@ -19,7 +19,7 @@
             main: 'index.js',
             defaultExtension: 'js'
         },
-        'app/appmultimain':{
+        'appmultimain':{
             defaultExtension: 'js'
         }
     };
