@@ -5,7 +5,8 @@
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
         'rxjs': 'node_modules/rxjs',
         'appmulti':'app/appmultimain',
-        'appmultiheroes':'app/Multiple-Components'
+        'appmultiheroes':'app/Multiple-Components',
+        'appheroservice':'app/HeroService'
     };
 
     var packages = {
@@ -27,6 +28,11 @@
             main: 'main.js',
             defaultExtension: 'js'
         },
+        'appheroservice': {
+            main: 'main.js',
+            defaultExtension: 'js'
+        },
+
     };
     var ngPackageNames = [
         'common',
