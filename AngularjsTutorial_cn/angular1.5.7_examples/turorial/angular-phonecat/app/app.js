@@ -1,4 +1,6 @@
-var phonecatApp=angular.module('phonecatApp',[]);
+var phonecatApp=angular.module('phonecatApp',[
+  'phonelist'
+]);
 
 phonecatApp.controller('PhoneListController',function PhoneListController($scope){
     $scope.phones=[{

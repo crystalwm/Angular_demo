@@ -12,7 +12,7 @@ function phoneListController(){
 
 }
 
-angular.module('phonecatApp').component('phoneList',{
+angular.module('phonelist').component('phoneList',{
     template:`
     <ul>
        <li ng-repeat="phone in $ctrl.phones">

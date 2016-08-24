@@ -10,7 +10,7 @@ function phoneListController() {
             snippet: 'ccc'
         }];
 }
-angular.module('phonecatApp').component('phoneList', {
+angular.module('phonelist').component('phoneList', {
     template: "\n    <ul>\n       <li ng-repeat=\"phone in $ctrl.phones\">\n       <span>name:{{phone.name}}</span>\n       <span>snippet:{{phone.snippet}}</span>\n       </li>\n    </ul>\n    ",
     controller: phoneListController
 });
