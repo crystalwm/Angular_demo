@@ -14,8 +14,9 @@ function phoneListController(){
 
 angular.module('phonelist').component('phoneList',{
     template:`
+    Search:<input type="text"/ ng-model="$ctrl.query">
     <ul>
-       <li ng-repeat="phone in $ctrl.phones">
+       <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query">
        <span>name:{{phone.name}}</span>
        <span>snippet:{{phone.snippet}}</span>
        </li>
