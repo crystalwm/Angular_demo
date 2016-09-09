@@ -1,0 +1,1 @@
+{"version":3,"file":"phone-detail.component.js","sourceRoot":"","sources":["phone-detail.component.ts"],"names":["phoneDetailController"],"mappings":"AAAA;;GAEG;AAEH,+BAA+B,OAAO;AAGtCA,CAACA;AACD,OAAO,CAAC,MAAM,CAAC,aAAa,CAAC,CAAC,SAAS,CAAC,aAAa,EAAC;IAClD,QAAQ,EAAC,EAAE;IACX,UAAU,EAAC,qBAAqB;CACnC,CAAC,CAAC"}
