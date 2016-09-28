@@ -1,3 +1,5 @@
-/**
- * Created by CWei on 2016/8/9.
- */
+module.exports={
+    "port": 8000,
+    "files": ["./src/**/*.{html,htm,css,js}"],
+    "server": { "baseDir": "./src" }
+};

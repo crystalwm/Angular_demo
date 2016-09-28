@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -13,15 +12,10 @@ var Hero = (function () {
     function Hero() {
     }
     return Hero;
-}());
+})();
 exports.Hero = Hero;
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Tour of Heroes';
-        this.hero = {
-            id: 1,
-            name: 'windstorm'
-        };
     }
     AppComponent = __decorate([
         core_1.Component({
@@ -35,6 +29,6 @@ var AppComponent = (function () {
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
-}());
+})();
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

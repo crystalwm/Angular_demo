@@ -1,4 +1,5 @@
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
-var hero_component_1 = require('./hero.component');
-platform_browser_dynamic_1.bootstrap(hero_component_1.HeroComponent);
+var app_module_1 = require('./app.module');
+//bootstrap(HeroComponent);
+platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 //# sourceMappingURL=main.js.map

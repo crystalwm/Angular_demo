@@ -26,12 +26,7 @@ function phoneListController(httpPhone){
     httpPhone.query().then(function(data){
         self.phones=data
     });
-
-
 }
-
-
-
 
 angular.module('phonelist').component('phoneList',{
     template:`

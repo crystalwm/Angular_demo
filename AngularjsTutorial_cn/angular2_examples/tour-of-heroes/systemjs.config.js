@@ -6,7 +6,8 @@
         'rxjs': 'node_modules/rxjs',
         'appmulti':'app/appmultimain',
         'appmultiheroes':'app/Multiple-Components',
-        'appheroservice':'app/HeroService'
+        'appheroservice':'app/HeroService',
+        'appheroroute':'app/HeroRoute'
     };
 
     var packages = {
@@ -29,6 +30,10 @@
             defaultExtension: 'js'
         },
         'appheroservice': {
+            main: 'main.js',
+            defaultExtension: 'js'
+        },
+        'appheroroute': {
             main: 'main.js',
             defaultExtension: 'js'
         },

@@ -1,23 +1,23 @@
-#### ÎÊÌâ
+#### é—®é¢˜
 
-1·ÃÎÊhttp://localhost:3000/multi-heroes.htmlµÄ¼ÓÔØ¹ı³Ì¡£
-1.1 Ê×ÏÈÒıÈëmulti-heroes.htmlµÄscript±êÇ©Ëù¼ÓÔØµÄËùÓĞjsÎÄ¼ş¡£
-1.2 ÓÉÓÚsystem.config.jsÖĞµÄº¯ÊıÊÇÒ»¸öÄäÃû×ÔÖ´ĞĞº¯Êı£¬Òò´Ë»áÖ´ĞĞÕâ¸öº¯ÊıÖĞµÄÄÚÈİ£¬ÓÉÓÚ`System.config()`
-    1.2.1 ¶ÔÓÚmapÊôĞÔµÄ´¦Àí
-    Èç¹û´æÔÚmap¶ÔÏó£¬Ôò»á±éÀú¸Ã¶ÔÏóÉÏµÄÃ¿¸öÊôĞÔp¡£²¢ÇÒ¶ÁÈ¡ÓëÊôĞÔp¶ÔÓ¦µÄÖµv¡£
+1è®¿é—®http://localhost:3000/multi-heroes.htmlçš„åŠ è½½è¿‡ç¨‹ã€‚
+1.1 é¦–å…ˆå¼•å…¥multi-heroes.htmlçš„scriptæ ‡ç­¾æ‰€åŠ è½½çš„æ‰€æœ‰jsæ–‡ä»¶ã€‚
+1.2 ç”±äºsystem.config.jsä¸­çš„å‡½æ•°æ˜¯ä¸€ä¸ªåŒ¿åè‡ªæ‰§è¡Œå‡½æ•°ï¼Œå› æ­¤ä¼šæ‰§è¡Œè¿™ä¸ªå‡½æ•°ä¸­çš„å†…å®¹ï¼Œç”±äº`System.config()`
+    1.2.1 å¯¹äºmapå±æ€§çš„å¤„ç†
+    å¦‚æœå­˜åœ¨mapå¯¹è±¡ï¼Œåˆ™ä¼šéå†è¯¥å¯¹è±¡ä¸Šçš„æ¯ä¸ªå±æ€§pã€‚å¹¶ä¸”è¯»å–ä¸å±æ€§på¯¹åº”çš„å€¼vã€‚
     ```
     loader.map[p] = v;
     ```
-    1.2.2 ¶ÔÓÚpackages¶ÔÏóµÄ´¦Àí
-    Èç¹û´æÔÚpackages¶ÔÏó£¬Ôò»á±éÀú¸Ã¶ÔÏóÉÏµÄÃ¿Ò»¸öÊôĞÔp¡£
-    ²¢ÇÒ»áµ÷ÓÃcoreResolve·½·¨ÔÚloader¶ÔÏóÉÏ½âÎöÊôĞÔp£¬µÃµ½props
-    Í¨¹ıÊôĞÔpºÍpackages»ñÈ¡µ½ËüµÄÖµpkg
-    Í¨¹ıpkg¶ÔÏó£¬½«ºÏ·¨µÄpackagesÊôĞÔ¼ÓÔØµ½
+    1.2.2 å¯¹äºpackageså¯¹è±¡çš„å¤„ç†
+    å¦‚æœå­˜åœ¨packageså¯¹è±¡ï¼Œåˆ™ä¼šéå†è¯¥å¯¹è±¡ä¸Šçš„æ¯ä¸€ä¸ªå±æ€§pã€‚
+    å¹¶ä¸”ä¼šè°ƒç”¨coreResolveæ–¹æ³•åœ¨loaderå¯¹è±¡ä¸Šè§£æå±æ€§pï¼Œå¾—åˆ°props
+    é€šè¿‡å±æ€§på’Œpackagesè·å–åˆ°å®ƒçš„å€¼pkg
+    é€šè¿‡pkgå¯¹è±¡ï¼Œå°†åˆæ³•çš„packageså±æ€§åŠ è½½åˆ°
     ```
     extendMeta(loader.packages[prop], pkg);
     ```
 
-Ó¦¸ÃÊÇÔÚ
+åº”è¯¥æ˜¯åœ¨
 ```
  <script src="node_modules/systemjs/dist/system.src.js"></script>
 ```
@@ -25,10 +25,72 @@
 ![dd](./img/System01.jpg)
 
 
-ÔÚsystem.config.jsÎÄ¼şÖĞ
-1.ÔÚHTMLÒ³ÃæÖĞimportÈëÁËÒ»¸ömultiappµÄcomponent.ËüÔÚSystem.map¶ÔÏóÖĞ²éÕÒÕâ¸öcomponentËùÔÚµÄÎÄ¼ş¼Ğapp
-2.È»ºóÔÚSystem.packagesÎÄ¼ş¼ĞÏÂ²éÕÒÔÚappÎÄ¼ş¼ĞÏÂËüµÄÈë¿ÚÎÄ¼şÊÇÄÄÒ»¸ö
-3.È»ºóÔËĞĞ¸ÃÎÄ¼ş¼ĞµÄmainÎÄ¼ş»òÕßÈç¹ûÃ»ÓĞmainÎÄ¼şµÄ»°£¬Ö±½ÓµÄÖ´ĞĞ¸ÃÎÄ¼ş¡£
+åœ¨system.config.jsæ–‡ä»¶ä¸­
+1.åœ¨HTMLé¡µé¢ä¸­importå…¥äº†ä¸€ä¸ªmultiappçš„component.å®ƒåœ¨System.mapå¯¹è±¡ä¸­æŸ¥æ‰¾è¿™ä¸ªcomponentæ‰€åœ¨çš„æ–‡ä»¶å¤¹app
+2.ç„¶ååœ¨System.packagesæ–‡ä»¶å¤¹ä¸‹æŸ¥æ‰¾åœ¨appæ–‡ä»¶å¤¹ä¸‹å®ƒçš„å…¥å£æ–‡ä»¶æ˜¯å“ªä¸€ä¸ª
+3.ç„¶åè¿è¡Œè¯¥æ–‡ä»¶å¤¹çš„mainæ–‡ä»¶æˆ–è€…å¦‚æœæ²¡æœ‰mainæ–‡ä»¶çš„è¯ï¼Œç›´æ¥çš„æ‰§è¡Œè¯¥æ–‡ä»¶ã€‚
 
-±¸×¢
-Òò´ËcomponentËùÔÚµÄÆô¶¯Â·¾¶ÊÇÔÚsystemjs.config.jsÎÄ¼şÖĞ½øĞĞÅäÖÃµÄ¡£
+å¤‡æ³¨
+å› æ­¤componentæ‰€åœ¨çš„å¯åŠ¨è·¯å¾„æ˜¯åœ¨systemjs.config.jsæ–‡ä»¶ä¸­è¿›è¡Œé…ç½®çš„ã€‚
+
+æƒ…å½¢1
+```
+var map={
+    'appheroservice':'app/HeroService'
+}
+var packages={
+     'HeroService': {
+          main: 'main.js',
+          defaultExtension: 'js'
+      }
+}
+```
+
+![dd](./img/System03.jpg)
+
+æƒ…å½¢2
+```
+var map={
+    'appheroservice':'app/HeroService'
+}
+var packages={
+     'appheroservice': {
+          main: 'main.js',
+          defaultExtension: 'js'
+      }
+}
+```
+
+![dd](./img/System04.jpg)
+é€šè¿‡æƒ…å½¢1å’Œæƒ…å½¢2å¯¹æ¯”å‘ç°ï¼Œmapå¯¹è±¡å’Œpackageså¯¹è±¡çš„å±æ€§å€¼éƒ½åº”è¯¥æ˜¯`appxxx`
+
+æƒ…å½¢3
+```
+var map={
+	'appmulti':'app/appmultimain'
+}
+var packages={
+	 'appmulti':{
+            defaultExtension: 'js'
+        },
+}
+```
+![ss](./img/System05.jpg)
+æƒ…å½¢4
+```
+var map={
+	'appmulti':'app/appmultimain'
+}
+var packages={
+	 'appmultimain':{
+            defaultExtension: 'js'
+        },
+}
+```
+![ss](./img/System06.jpg)
+é€šè¿‡æƒ…å½¢4å’Œæƒ…å½¢5çš„å¯¹æ¯”å‘ç°äº†ï¼Œåœ¨æœ‰æ²¡æœ‰`main`çš„æ—¶å€™çš„åŒºåˆ«
+
+
+
+
+

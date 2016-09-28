@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -13,7 +12,7 @@ var Hero = (function () {
     function Hero() {
     }
     return Hero;
-}());
+})();
 exports.Hero = Hero;
 var AppmultiComponent = (function () {
     function AppmultiComponent() {
@@ -46,7 +45,7 @@ var AppmultiComponent = (function () {
         __metadata('design:paramtypes', [])
     ], AppmultiComponent);
     return AppmultiComponent;
-}());
+})();
 exports.AppmultiComponent = AppmultiComponent;
 var HEROES = [
     { id: 11, name: 'Mr. Nice' },

@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-
-heroes = [
-    new Hero(1, 'Windstorm'),
-    new Hero(13, 'Bombasto'),
-    new Hero(15, 'Magneta'),
-    new Hero(20, 'Tornado')
-];
-myHero = this.heroes[0];
+import {Hero} from './hero';
 @Component({
     selector: 'my-app',
     template: `
@@ -23,7 +16,12 @@ myHero = this.heroes[0];
 })
 export class AppComponent {
     title = 'Tour of Heroes';
-    heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+    heroes = [
+        new Hero(1, 'Windstorm'),
+        new Hero(13, 'Bombasto'),
+        new Hero(15, 'Magneta'),
+        new Hero(20, 'Tornado')
+    ];
     myHero = this.heroes[0];
 }
 
