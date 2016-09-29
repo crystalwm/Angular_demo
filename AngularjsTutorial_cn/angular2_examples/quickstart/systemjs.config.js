@@ -13,6 +13,7 @@
             // our app is within the app folder
             app: 'app',
             'app-forms':'app-forms',
+            'app-di':'app-di',
             // angular bundles
             '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
             '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
@@ -33,6 +34,10 @@
                 defaultExtension: 'js'
             },
             'app-forms': {
+                main: './main.js',
+                defaultExtension: 'js'
+            },
+            'app-di': {
                 main: './main.js',
                 defaultExtension: 'js'
             },
