@@ -11,11 +11,15 @@ import {Hero} from './hero';
           {{ hero.name }}
         </li>
       </ul>
+      <template [ngIf]="show">
+        <div>test ngif</div>
+      </template>
     `
 
 })
 export class AppComponent {
     title = 'Tour of Heroes';
+    show:boolean=true;
     heroes = [
         new Hero(1, 'Windstorm'),
         new Hero(13, 'Bombasto'),

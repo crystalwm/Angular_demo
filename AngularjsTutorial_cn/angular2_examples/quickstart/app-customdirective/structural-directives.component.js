@@ -9,18 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_heroes_1 = require('./mock-heroes');
-var HeroService = (function () {
-    function HeroService() {
+var StructuralDirectivesComponent = (function () {
+    function StructuralDirectivesComponent() {
+        this.heroes = ['Mr. Nice', 'Narco', 'Bombasto'];
+        this.hero = this.heroes[0];
+        this.condition = true;
+        this.isVisible = true;
+        this.logs = [];
+        this.status = 'ready';
     }
-    HeroService.prototype.getHeroes = function () {
-        return Promise.resolve(mock_heroes_1.HEROES);
-    };
-    HeroService = __decorate([
-        core_1.Injectable(), 
+    StructuralDirectivesComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'structural-directives',
+            templateUrl: 'structural-directives.component.html',
+            styles: ['button { min-width: 100px; }']
+        }), 
         __metadata('design:paramtypes', [])
-    ], HeroService);
-    return HeroService;
+    ], StructuralDirectivesComponent);
+    return StructuralDirectivesComponent;
 }());
-exports.HeroService = HeroService;
-//# sourceMappingURL=hero.service.js.map
+exports.StructuralDirectivesComponent = StructuralDirectivesComponent;
+//# sourceMappingURL=structural-directives.component.js.map

@@ -1,6 +1,6 @@
 (function (global) {
     var map = {
-        'app': 'app',
+        'app': 'app/app',
         '@angular': 'node_modules/@angular',
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
         'rxjs': 'node_modules/rxjs',

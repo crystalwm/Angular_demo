@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,27 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Hero = (function () {
-    function Hero() {
+var platform_browser_1 = require('@angular/platform-browser');
+var app_component_1 = require('./app.component');
+var AppModule = (function () {
+    function AppModule() {
     }
-    return Hero;
-})();
-exports.Hero = Hero;
-var AppComponent = (function () {
-    function AppComponent() {
-    }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: '<h1>{{title}}</h1>' +
-                '<h2>{{hero.name}}</h2> details' +
-                '<div><label for="">id:</label>{{hero.id}}</div>' +
-                '<div><label for="">name:</label>' +
-                '<input [(ngModel)]="hero.name" placeholder="name"></div>'
+    AppModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule],
+            declarations: [app_component_1.AppComponent],
+            bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
-})();
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+    ], AppModule);
+    return AppModule;
+}());
+exports.AppModule = AppModule;
+//# sourceMappingURL=app.module.js.map

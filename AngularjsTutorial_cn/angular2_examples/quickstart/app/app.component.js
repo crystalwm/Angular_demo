@@ -13,6 +13,7 @@ var hero_1 = require('./hero');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
+        this.show = true;
         this.heroes = [
             new hero_1.Hero(1, 'Windstorm'),
             new hero_1.Hero(13, 'Bombasto'),
@@ -24,7 +25,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n      <h1>{{title}}</h1>\n      <h2>My favorite hero is: {{myHero.name}}</h2>\n      <p>Heroes:</p>\n      <ul>\n        <li *ngFor=\"let hero of heroes\">\n          {{ hero.name }}\n        </li>\n      </ul>\n    "
+            template: "\n      <h1>{{title}}</h1>\n      <h2>My favorite hero is: {{myHero.name}}</h2>\n      <p>Heroes:</p>\n      <ul>\n        <li *ngFor=\"let hero of heroes\">\n          {{ hero.name }}\n        </li>\n      </ul>\n      <template [ngIf]=\"show\">\n        <div>test ngif</div>\n      </template>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

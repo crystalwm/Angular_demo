@@ -9,18 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_heroes_1 = require('./mock-heroes');
-var HeroService = (function () {
-    function HeroService() {
+var Hero = (function () {
+    function Hero() {
     }
-    HeroService.prototype.getHeroes = function () {
-        return Promise.resolve(mock_heroes_1.HEROES);
-    };
-    HeroService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
-    ], HeroService);
-    return HeroService;
+    return Hero;
 }());
-exports.HeroService = HeroService;
-//# sourceMappingURL=hero.service.js.map
+exports.Hero = Hero;
+var AppComponent = (function () {
+    function AppComponent() {
+        this.title = 'Tour of Heroes';
+        this.hero = {
+            id: 1,
+            name: 'Windstorm'
+        };
+    }
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: 'my-app',
+            template: "\n    <h1>{{title}}</h1>\n    <h2>{{hero.name}} details!</h2>\n    <div><label>id: </label>{{hero.id}}</div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n    </div>\n    "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AppComponent);
+    return AppComponent;
+}());
+exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map

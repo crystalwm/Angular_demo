@@ -14,6 +14,7 @@
             app: 'app',
             'app-forms':'app-forms',
             'app-di':'app-di',
+            'app-customdirective':'app-customdirective',
             // angular bundles
             '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
             '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
@@ -38,6 +39,10 @@
                 defaultExtension: 'js'
             },
             'app-di': {
+                main: './main.js',
+                defaultExtension: 'js'
+            },
+            'app-customdirective': {
                 main: './main.js',
                 defaultExtension: 'js'
             },
