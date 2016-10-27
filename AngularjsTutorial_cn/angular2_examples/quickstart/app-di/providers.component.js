@@ -23,7 +23,10 @@ var app_config_1 = require('./app.config');
 var hero_service_1 = require('./heroes/hero.service');
 var hero_service_provider_1 = require('./heroes/hero.service.provider');
 var logger_service_1 = require('./logger.service');
+var logger2_service_1 = require('./logger2.service');
 var user_service_1 = require('./user.service');
+var d = new logger2_service_1.Logger2();
+d.log('ddd');
 var template = '{{log}}';
 //////////////////////////////////////////
 var Provider1Component = (function () {

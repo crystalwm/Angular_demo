@@ -8,7 +8,11 @@ import { APP_CONFIG, AppConfig,
 import { HeroService }          from './heroes/hero.service';
 import { heroServiceProvider }  from './heroes/hero.service.provider';
 import { Logger }               from './logger.service';
+import { Logger2 }             from './logger2.service';
 import { UserService }    from './user.service';
+
+var d=new Logger2();
+d.log('ddd');
 
 let template = '{{log}}';
 
@@ -24,6 +28,8 @@ export class Provider1Component {
         logger.log('Hello from logger provided with Logger class');
         this.log = logger.logs[0];
     }
+
+
 }
 
 //////////////////////////////////////////
