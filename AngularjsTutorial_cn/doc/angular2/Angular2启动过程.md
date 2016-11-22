@@ -2,13 +2,18 @@
 
 1访问http://localhost:3000/multi-heroes.html的加载过程。
 1.1 首先引入multi-heroes.html的script标签所加载的所有js文件。
+
 1.2 由于system.config.js中的函数是一个匿名自执行函数，因此会执行这个函数中的内容，由于`System.config()`
+
     1.2.1 对于map属性的处理
+    
     如果存在map对象，则会遍历该对象上的每个属性p。并且读取与属性p对应的值v。
     ```
     loader.map[p] = v;
     ```
+    
     1.2.2 对于packages对象的处理
+    
     如果存在packages对象，则会遍历该对象上的每一个属性p。
     并且会调用coreResolve方法在loader对象上解析属性p，得到props
     通过属性p和packages获取到它的值pkg
