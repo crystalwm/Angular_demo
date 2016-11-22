@@ -31,8 +31,11 @@
 
 
 在system.config.js文件中
+
 1.在HTML页面中import入了一个multiapp的component.它在System.map对象中查找这个component所在的文件夹app
+
 2.然后在System.packages文件夹下查找在app文件夹下它的入口文件是哪一个
+
 3.然后运行该文件夹的main文件或者如果没有main文件的话，直接的执行该文件。
 
 备注
