@@ -9,39 +9,42 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var app_component_1 = require('./app.component');
+var router_1 = require('@angular/router');
 var heroes_component_1 = require('./heroes.component');
 var dashboard_component_1 = require('./dashboard.component');
 var heroDetail_component_1 = require('./heroDetail.component');
-var app_routing_module_1 = require('./app-routing.module');
-var hero_service_1 = require('./hero.service');
-hero_service_1.HeroService;
-var AppModule = (function () {
-    function AppModule() {
+var routes = [
+    {
+        path: 'heroes',
+        component: heroes_component_1.HeroesComponent
+    },
+    {
+        path: 'dashboard',
+        component: dashboard_component_1.DashboardComponent
+    },
+    {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+    },
+    {
+        path: 'detail/:id',
+        component: heroDetail_component_1.HeroDetailComponent
     }
-    AppModule = __decorate([
+];
+var AppRoutingModule = (function () {
+    function AppRoutingModule() {
+    }
+    AppRoutingModule = __decorate([
         core_1.NgModule({
             imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule,
-                app_routing_module_1.AppRoutingModule
+                router_1.RouterModule.forRoot(routes)
             ],
-            declarations: [
-                app_component_1.AppComponent,
-                heroes_component_1.HeroesComponent,
-                dashboard_component_1.DashboardComponent,
-                heroDetail_component_1.HeroDetailComponent
-            ],
-            providers: [
-                hero_service_1.HeroService
-            ],
-            bootstrap: [app_component_1.AppComponent]
+            exports: [router_1.RouterModule]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], AppRoutingModule);
+    return AppRoutingModule;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.AppRoutingModule = AppRoutingModule;
+//# sourceMappingURL=app-routing.module.js.map
