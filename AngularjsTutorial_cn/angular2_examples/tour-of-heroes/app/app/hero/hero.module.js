@@ -11,30 +11,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
-var app_component_1 = require('./app.component');
-var app_routing_module_1 = require('./app-routing.module');
-var hero_module_1 = require('./hero/hero.module');
-var crisis_center_module_1 = require('./crisis-center/crisis-center.module');
-var AppModule = (function () {
-    function AppModule() {
+var hero_component_1 = require('./hero.component');
+var heroes_component_1 = require('./heroes.component');
+var dashboard_component_1 = require('./dashboard.component');
+var heroDetail_component_1 = require('./heroDetail.component');
+var hero_routing_module_1 = require('./hero-routing.module');
+var hero_service_1 = require('./hero.service');
+var HeroModule = (function () {
+    function HeroModule() {
     }
-    AppModule = __decorate([
+    HeroModule = __decorate([
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                hero_module_1.HeroModule,
-                crisis_center_module_1.CrisisCenterModule,
-                app_routing_module_1.AppRoutingModule
+                hero_routing_module_1.HeroRoutingModule
             ],
             declarations: [
-                app_component_1.AppComponent,
+                hero_component_1.HeroComponent,
+                heroes_component_1.HeroesComponent,
+                dashboard_component_1.DashboardComponent,
+                heroDetail_component_1.HeroDetailComponent
             ],
-            bootstrap: [app_component_1.AppComponent]
+            providers: [
+                hero_service_1.HeroService
+            ],
+            bootstrap: [hero_component_1.HeroComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], HeroModule);
+    return HeroModule;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.HeroModule = HeroModule;
+//# sourceMappingURL=hero.module.js.map

@@ -4,9 +4,8 @@ import {Component} from '@angular/core';
     selector:'my-app',
     template:`
         <h1>{{title}}</h1>
-        <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
+        <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
         <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
-
         <router-outlet></router-outlet>
     `,
     styles:[
@@ -28,7 +27,7 @@ import {Component} from '@angular/core';
     ]
 }
 )
-export class AppComponent{
+export class HeroComponent{
     title="tour of heroes";
 
 }

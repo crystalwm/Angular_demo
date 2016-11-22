@@ -10,26 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var heroes_component_1 = require('./heroes.component');
-var dashboard_component_1 = require('./dashboard.component');
-var heroDetail_component_1 = require('./heroDetail.component');
+var hero_component_1 = require('./hero/hero.component');
+var crisis_center_component_1 = require('./crisis-center/crisis-center.component');
 var routes = [
     {
         path: 'heroes',
-        component: heroes_component_1.HeroesComponent
+        component: hero_component_1.HeroComponent
     },
     {
-        path: 'dashboard',
-        component: dashboard_component_1.DashboardComponent
+        path: 'crisis-center',
+        component: crisis_center_component_1.CrisisCenterComponent
     },
     {
         path: '',
-        redirectTo: 'dashboard',
+        redirectTo: 'crisis-center',
         pathMatch: 'full'
-    },
-    {
-        path: 'detail/:id',
-        component: heroDetail_component_1.HeroDetailComponent
     }
 ];
 var AppRoutingModule = (function () {

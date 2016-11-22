@@ -15,6 +15,12 @@
             main: 'main.js',
             defaultExtension: 'js'
         },
+        'hero':{
+            defaultExtension: 'js'
+        },
+        'crisis-center':{
+            defaultExtension: 'js'
+        },
         'rxjs': {
             defaultExtension: 'js'
         },

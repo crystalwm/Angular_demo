@@ -9,21 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var HeroComponent = (function () {
+    function HeroComponent() {
         this.title = "tour of heroes";
     }
-    AppComponent = __decorate([
+    HeroComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n        <h1>{{title}}</h1>\n        <a routerLink=\"/crisis-center\" routerLinkActive=\"active\">Crisis Center</a>\n        <a routerLink=\"/heroes\" routerLinkActive=\"active\">Heroes</a>\n\n        <router-outlet></router-outlet>\n    ",
+            template: "\n        <h1>{{title}}</h1>\n        <a routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</a>\n        <a routerLink=\"/heroes\" routerLinkActive=\"active\">Heroes</a>\n        <router-outlet></router-outlet>\n    ",
             styles: [
                 "\n        a {\n            text-decoration: none;\n            border: 1px solid #eee;\n            padding: 5px;\n            background-color: lavender;\n            border-radius: 5px;\n        }\n        a:hover{\n            background-color:thistle;\n        }\n        a.active {\n            background-color:thistle;\n        }\n"
             ]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HeroComponent);
+    return HeroComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HeroComponent = HeroComponent;
+//# sourceMappingURL=hero.component.js.map
