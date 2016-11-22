@@ -23,7 +23,8 @@ var DashboardComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-dashbaord',
-            templateUrl: './dashboard.template.html'
+            templateUrl: './dashboard.template.html',
+            styles: ["\n        .col-l-4 {\n            width: 200px;\n            display: inline-block;\n            text-align: center;\n            padding: 20px;\n            box-sizing: border-box;\n            border: 1px solid #eee;\n            margin:10px;    \n        }\n        a{\n            text-decoration:none;\n        }\n        \n    "]
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService])
     ], DashboardComponent);
