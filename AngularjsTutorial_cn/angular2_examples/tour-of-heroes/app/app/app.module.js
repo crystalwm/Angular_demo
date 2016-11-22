@@ -10,14 +10,51 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
+var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
+var heroes_component_1 = require('./heroes.component');
+var dashboard_component_1 = require('./dashboard.component');
+var heroDetail_component_1 = require('./heroDetail.component');
+var hero_service_1 = require('./hero.service');
+hero_service_1.HeroService;
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+                router_1.RouterModule.forRoot([
+                    {
+                        path: 'heroes',
+                        component: heroes_component_1.HeroesComponent
+                    },
+                    {
+                        path: 'dashboard',
+                        component: dashboard_component_1.DashboardComponent
+                    },
+                    {
+                        path: '',
+                        redirectTo: 'dashboard',
+                        pathMatch: 'full'
+                    },
+                    {
+                        path: 'detail/:id',
+                        component: heroDetail_component_1.HeroDetailComponent
+                    }
+                ])
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                heroes_component_1.HeroesComponent,
+                dashboard_component_1.DashboardComponent,
+                heroDetail_component_1.HeroDetailComponent
+            ],
+            providers: [
+                hero_service_1.HeroService
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

@@ -1,17 +1,16 @@
-import { Component } from '@angular/core';
-
-
-
+import {Component} from '@angular/core';
 
 @Component({
-    selector: 'my-app',
-    template: `
-    <h1>{{title}}</h1>
-    <h2>{{hero}}</h2>
+    selector:'my-app',
+    template:`
+        <h1>{{title}}</h1>
+        <a routerLink="/dashboard">Dashboard</a>
+        <a routerLink="/heroes">Heroes</a>
+        <router-outlet></router-outlet>
     `
-})
-export class AppComponent {
-    title = 'Tour of Heroes';
-    hero='windstorm';
 }
+)
+export class AppComponent{
+    title="tour of heroes";
 
+}
