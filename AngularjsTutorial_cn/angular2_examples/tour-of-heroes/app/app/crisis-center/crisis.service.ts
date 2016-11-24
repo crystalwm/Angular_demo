@@ -6,9 +6,10 @@ import {Crisis} from './crisis';
 @Injectable()
 export class CrisisService{
     static nextCrisisId = 100;
-    getCrisis(id:number){
-        this.getCrisises().then(crisises=>crisises.find(crisis=>crisis.id==id));
+    getCrisis(id:number):Promise<Crisis>{
+        return this.getCrisises().then(crisises=>crisises.find(crisis=>crisis.id==id));
     }
+
     getCrisises():Promise<Crisis[]>{
         return Promise.resolve(crisises);  
     }
@@ -19,7 +20,6 @@ export class CrisisService{
             name:name
         }
         this.getCrisises().then(crisises=>crisises.push(crisis));
-
     }
 
 }

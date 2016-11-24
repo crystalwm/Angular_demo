@@ -8,8 +8,8 @@ import {HeroService} from './hero.service';
 
 @Component({
     selector: 'my-heroes',
-   template:
-        `<h1>My Heroes</h1>
+    template:`
+        <h1>My Heroes</h1>
         <ul class="heroes">
             <li *ngFor="let hero of heroes" (click)="onSelect(hero)"
             [class.selected]="hero===selectedHero">
@@ -21,7 +21,7 @@ import {HeroService} from './hero.service';
             <button (click)="goDetail()">view detail</button>
         </div>
         `,
-    styles: [`
+     styles: [`
               .selected {
                 background-color: #CFD8DC !important;
                 color: white;
@@ -69,7 +69,7 @@ import {HeroService} from './hero.service';
                 margin-right: .8em;
                 border-radius: 4px 0 0 4px;
               }
-    `]
+      `]
 })
 export class HeroesComponent implements OnInit{
     title="multi heroes";

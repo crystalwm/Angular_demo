@@ -14,7 +14,7 @@ var CrisisService = (function () {
     function CrisisService() {
     }
     CrisisService.prototype.getCrisis = function (id) {
-        this.getCrisises().then(function (crisises) { return crisises.find(function (crisis) { return crisis.id == id; }); });
+        return this.getCrisises().then(function (crisises) { return crisises.find(function (crisis) { return crisis.id == id; }); });
     };
     CrisisService.prototype.getCrisises = function () {
         return Promise.resolve(mock_Crisises_1.crisises);
