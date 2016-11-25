@@ -21,6 +21,9 @@
         'crisis-center':{
             defaultExtension: 'js'
         },
+        'admin':{
+            defaultExtension: 'js'
+        },
         'rxjs': {
             defaultExtension: 'js'
         },

@@ -15,6 +15,9 @@ var app_component_1 = require('./app.component');
 var app_routing_module_1 = require('./app-routing.module');
 var hero_module_1 = require('./hero/hero.module');
 var crisis_center_module_1 = require('./crisis-center/crisis-center.module');
+var admin_module_1 = require('./admin/admin.module');
+var auth_guard_service_1 = require('./auth-guard.service');
+var auth_service_1 = require('./auth.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,10 +28,15 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 hero_module_1.HeroModule,
                 crisis_center_module_1.CrisisCenterModule,
+                admin_module_1.AdminModule,
                 app_routing_module_1.AppRoutingModule
             ],
             declarations: [
                 app_component_1.AppComponent,
+            ],
+            providers: [
+                auth_guard_service_1.AuthGuardService,
+                auth_service_1.AuthService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

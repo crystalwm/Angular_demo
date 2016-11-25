@@ -10,41 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var hero_component_1 = require('./hero/hero.component');
-var crisis_center_component_1 = require('./crisis-center/crisis-center.component');
-var admin_component_1 = require('./admin/admin.component');
-var routes = [
-    {
-        path: 'heroes',
-        component: hero_component_1.HeroComponent
-    },
-    {
-        path: 'crisis-center',
-        component: crisis_center_component_1.CrisisCenterComponent
-    },
-    {
-        path: 'admin',
-        component: admin_component_1.AdminComponent
-    },
-    {
-        path: '',
-        redirectTo: 'crisis-center',
-        pathMatch: 'full'
+var LoginModule = (function () {
+    function LoginModule() {
     }
-];
-var AppRoutingModule = (function () {
-    function AppRoutingModule() {
-    }
-    AppRoutingModule = __decorate([
+    LoginModule = __decorate([
         core_1.NgModule({
             imports: [
-                router_1.RouterModule.forRoot(routes)
+                router_1.RouterModule
             ],
-            exports: [router_1.RouterModule]
+            declarations: [LoginModule]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppRoutingModule);
-    return AppRoutingModule;
+    ], LoginModule);
+    return LoginModule;
 }());
-exports.AppRoutingModule = AppRoutingModule;
-//# sourceMappingURL=app-routing.module.js.map
+exports.LoginModule = LoginModule;
+//# sourceMappingURL=login.module.js.map
