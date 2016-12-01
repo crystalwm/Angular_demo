@@ -24,9 +24,9 @@ var AuthGuardService = (function () {
         this.router.navigate['/login'];
         return false;
     };
-    AuthGuardService.prototype.canActivate = function () {
-        console.log("enter canActivate ");
-        return true;
+    AuthGuardService.prototype.canActivate = function (futureRoute, futureRouteState) {
+        var url = futureRouteState.url;
+        return this.checkLogin(url);
     };
     AuthGuardService = __decorate([
         core_1.Injectable(), 

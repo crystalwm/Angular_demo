@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var login_component_1 = require('./login.component');
 var router_1 = require('@angular/router');
 var LoginModule = (function () {
     function LoginModule() {
@@ -18,7 +19,7 @@ var LoginModule = (function () {
             imports: [
                 router_1.RouterModule
             ],
-            declarations: [LoginModule]
+            declarations: [login_component_1.LoginComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], LoginModule);

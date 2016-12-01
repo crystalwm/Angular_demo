@@ -7,6 +7,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {HeroModule}  from './hero/hero.module';
 import {CrisisCenterModule} from './crisis-center/crisis-center.module';
 import {AdminModule} from './admin/admin.module';
+import {LoginModule} from './login/login.module';
 import {AuthGuardService} from './auth-guard.service';
 import {AuthService} from './auth.service';
 
@@ -19,6 +20,7 @@ import {AuthService} from './auth.service';
         HeroModule,
         CrisisCenterModule,
         AdminModule,
+        LoginModule,
         AppRoutingModule
         ],
     declarations: [ 

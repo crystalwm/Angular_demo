@@ -7,7 +7,7 @@ import {RouterModule} from '@angular/router';
     imports:[
       RouterModule  
     ],
-    declarations:[LoginModule]
+    declarations:[LoginComponent]
 })
 export class LoginModule{
 

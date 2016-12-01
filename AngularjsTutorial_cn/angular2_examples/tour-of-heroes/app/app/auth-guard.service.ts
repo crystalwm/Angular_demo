@@ -1,5 +1,7 @@
 import {Injectable} from '@angular/core';
-import {CanActivate} from '@angular/router';
+import {CanActivate,
+        ActivatedRouteSnapshot,
+        RouterStateSnapshot} from '@angular/router';
 import {AuthService} from "./auth.service";
 import {Router} from "@angular/router";
 
@@ -18,8 +20,11 @@ export class AuthGuardService implements CanActivate{
         this.router.navigate['/login'];
         return false;
     }
-    canActivate():boolean{
-        console.log("enter canActivate ");
-        return true;
+    canActivate(
+        futureRoute:ActivatedRouteSnapshot,
+        futureRouteState:RouterStateSnapshot
+    ):boolean{
+        let url=futureRouteState.url;
+        return this.checkLogin(url);
     }
 }

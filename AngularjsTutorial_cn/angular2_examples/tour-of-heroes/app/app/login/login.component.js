@@ -9,14 +9,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var auth_service_1 = require('../auth.service');
 var LoginComponent = (function () {
-    function LoginComponent() {
+    function LoginComponent(authService) {
+        this.authService = authService;
+        this.buttonState = "Login";
+        this.desp = "Logged out";
     }
+    LoginComponent.prototype.ngOnInit = function () {
+        this.isLoggedIn = this.authService.isLoggedIn;
+    };
+    LoginComponent.prototype.changeState = function () {
+        if (this.isLoggedIn) {
+            this.authService.logout();
+            this.buttonState = "Login";
+            this.desp = "Logged out";
+            this.isLoggedIn = this.authService.isLoggedIn;
+        }
+        else {
+            var that = this;
+            this.authService.login().subscribe(function () {
+                that.buttonState = "Logout";
+                that.desp = "Logged in";
+                that.isLoggedIn = that.authService.isLoggedIn;
+            });
+        }
+    };
     LoginComponent = __decorate([
         core_1.Component({
-            template: "\n        <p>welcome to the login</p>\n    "
+            template: "\n        <h2>LOGIN</h2>\n        <p>{{desp}}</p>\n        <button (click)=\"changeState()\">{{buttonState}}</button>\n    "
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [auth_service_1.AuthService])
     ], LoginComponent);
     return LoginComponent;
 }());

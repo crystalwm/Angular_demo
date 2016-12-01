@@ -24,6 +24,9 @@
         'admin':{
             defaultExtension: 'js'
         },
+        'login':{
+            defaultExtension:'js'
+        },
         'rxjs': {
             defaultExtension: 'js'
         },
