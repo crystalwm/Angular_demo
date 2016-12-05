@@ -11,7 +11,7 @@ const routes:Route[]=[{
         component:AdminComponent,
         children:[{
             path:'',
-            canActivate:[AuthGuardService],
+            canActivateChild:[AuthGuardService],
             children:[
                 {
                     path:'crisises',

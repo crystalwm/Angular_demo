@@ -21,12 +21,15 @@ var AuthGuardService = (function () {
             return true;
         }
         this.authService.redirectUrl = url;
-        this.router.navigate['/login'];
+        this.router.navigate(['/login']);
         return false;
     };
     AuthGuardService.prototype.canActivate = function (futureRoute, futureRouteState) {
         var url = futureRouteState.url;
         return this.checkLogin(url);
+    };
+    AuthGuardService.prototype.canActivateChild = function (futureRoute, futureRouteState) {
+        return this.canActivate(futureRoute, futureRouteState);
     };
     AuthGuardService = __decorate([
         core_1.Injectable(), 

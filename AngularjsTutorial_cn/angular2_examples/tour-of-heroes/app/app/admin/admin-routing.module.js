@@ -20,7 +20,7 @@ var routes = [{
         component: admin_component_1.AdminComponent,
         children: [{
                 path: '',
-                canActivate: [auth_guard_service_1.AuthGuardService],
+                canActivateChild: [auth_guard_service_1.AuthGuardService],
                 children: [
                     {
                         path: 'crisises',

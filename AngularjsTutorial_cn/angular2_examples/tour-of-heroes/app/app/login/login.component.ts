@@ -31,10 +31,10 @@ export class LoginComponent implements OnInit{
           }  
         else{
             var that:any=this;
+            this.desp="Trying to log in ...";
             this.authService.login().subscribe(function(){
                 that.buttonState="Logout";
                 that.desp="Logged in";
-                that.isLoggedIn=that.authService.isLoggedIn;
             });
         }
 
