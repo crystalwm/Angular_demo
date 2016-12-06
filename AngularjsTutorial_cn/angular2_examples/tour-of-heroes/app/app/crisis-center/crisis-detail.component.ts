@@ -30,8 +30,13 @@ export class CrisisDetailComponent implements OnInit{
             this.id=id;
             this.crisisService.getCrisis(id).then(crisis=>{
                 this.crisis=crisis;
-                this.editName=crisis.name;
+            //    this.editName=crisis.name;
             });
+        });
+
+        //get data from resolve
+        this.route.data.subscribe((data:{editName:string})=>{
+            this.editName=data.editName;
         });
     }
 
@@ -39,7 +44,7 @@ export class CrisisDetailComponent implements OnInit{
         private route:ActivatedRoute,
         private location:Location,
         private crisisService:CrisisService,
-        public dialogService:DialogService
+        public  dialogService:DialogService
     ){}
 
     goBack(){

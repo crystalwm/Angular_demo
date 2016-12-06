@@ -9,6 +9,7 @@ import {CrisisDetailComponent} from './crisis-detail.component';
 import {CrisisListComponent} from './crisis-list.component';
 import {CrisisService} from './crisis.service';
 import {CanDeactivateGuardCrisisDetailService} from './can-deactive-guarid-crisis-detail.service';
+import {CrisisDetailResolveService} from './crisis-detail-resolve.service';
 
 
 
@@ -26,7 +27,8 @@ import {CanDeactivateGuardCrisisDetailService} from './can-deactive-guarid-crisi
         ],
     providers:[
         CrisisService,
-        CanDeactivateGuardCrisisDetailService
+        CanDeactivateGuardCrisisDetailService,
+        CrisisDetailResolveService
         ],
     bootstrap:[CrisisCenterComponent]
 })

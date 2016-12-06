@@ -27,8 +27,12 @@ var CrisisDetailComponent = (function () {
             _this.id = id;
             _this.crisisService.getCrisis(id).then(function (crisis) {
                 _this.crisis = crisis;
-                _this.editName = crisis.name;
+                //    this.editName=crisis.name;
             });
+        });
+        //get data from resolve
+        this.route.data.subscribe(function (data) {
+            _this.editName = data.editName;
         });
     };
     CrisisDetailComponent.prototype.goBack = function () {
