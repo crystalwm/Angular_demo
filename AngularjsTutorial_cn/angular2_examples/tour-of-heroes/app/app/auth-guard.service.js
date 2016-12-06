@@ -21,7 +21,11 @@ var AuthGuardService = (function () {
             return true;
         }
         this.authService.redirectUrl = url;
-        this.router.navigate(['/login']);
+        var navigationExtras = {
+            queryParams: { sessionId: 'ddd' },
+            fragment: 'anchor'
+        };
+        this.router.navigate(['/login'], navigationExtras);
         return false;
     };
     AuthGuardService.prototype.canActivate = function (futureRoute, futureRouteState) {
