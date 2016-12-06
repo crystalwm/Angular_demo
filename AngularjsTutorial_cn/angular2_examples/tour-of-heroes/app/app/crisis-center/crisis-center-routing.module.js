@@ -35,7 +35,7 @@ var routes = [
                         component: crisis_detail_component_1.CrisisDetailComponent,
                         canDeactivate: [can_deactive_guarid_crisis_detail_service_1.CanDeactivateGuardCrisisDetailService],
                         resolve: {
-                            editName: crisis_detail_resolve_service_1.CrisisDetailResolveService
+                            crisis: crisis_detail_resolve_service_1.CrisisDetailResolveService
                         }
                     },
                     {

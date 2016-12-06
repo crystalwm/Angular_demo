@@ -9,15 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var crisis_service_1 = require('./crisis.service');
 var CrisisDetailResolveService = (function () {
-    function CrisisDetailResolveService() {
+    function CrisisDetailResolveService(router, cs) {
+        this.router = router;
+        this.cs = cs;
     }
-    CrisisDetailResolveService.prototype.resolve = function () {
-        return 'crystal';
+    CrisisDetailResolveService.prototype.resolve = function (route) {
+        var _this = this;
+        var id = route.params['id'];
+        return this.cs.getCrisis(id).then(function (crisis) {
+            if (crisis) {
+                return crisis;
+            }
+            else {
+                _this.router.navigate(['/crisis-center']);
+                return false;
+            }
+        });
     };
     CrisisDetailResolveService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router, crisis_service_1.CrisisService])
     ], CrisisDetailResolveService);
     return CrisisDetailResolveService;
 }());

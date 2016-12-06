@@ -27,7 +27,7 @@ const routes:Routes=[
                 component: CrisisDetailComponent,
                 canDeactivate:[CanDeactivateGuardCrisisDetailService],
                 resolve:{
-                  editName:CrisisDetailResolveService
+                  crisis:CrisisDetailResolveService
                 }
               },
               {

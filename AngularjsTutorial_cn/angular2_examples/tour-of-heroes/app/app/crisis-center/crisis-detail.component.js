@@ -21,18 +21,21 @@ var CrisisDetailComponent = (function () {
         this.dialogService = dialogService;
     }
     CrisisDetailComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.route.params.forEach(function (params) {
-            var id = +params['id'];
-            _this.id = id;
-            _this.crisisService.getCrisis(id).then(function (crisis) {
-                _this.crisis = crisis;
-                //    this.editName=crisis.name;
+        /*
+        this.route.params.forEach((params:Params)=>{
+            let id=+params['id'];
+            this.id=id;
+            this.crisisService.getCrisis(id).then(crisis=>{
+             //   this.crisis=crisis;
+            //    this.editName=crisis.name;
             });
         });
+        */
+        var _this = this;
         //get data from resolve
         this.route.data.subscribe(function (data) {
-            _this.editName = data.editName;
+            _this.crisis = data.crisis;
+            _this.editName = data.crisis.name;
         });
     };
     CrisisDetailComponent.prototype.goBack = function () {

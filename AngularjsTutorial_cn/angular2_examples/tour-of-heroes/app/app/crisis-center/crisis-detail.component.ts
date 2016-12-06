@@ -25,18 +25,21 @@ export class CrisisDetailComponent implements OnInit{
     id:number;
     editName:string;
     ngOnInit(){
+        /*
         this.route.params.forEach((params:Params)=>{
             let id=+params['id'];
             this.id=id;
             this.crisisService.getCrisis(id).then(crisis=>{
-                this.crisis=crisis;
+             //   this.crisis=crisis;
             //    this.editName=crisis.name;
             });
         });
+        */
 
         //get data from resolve
-        this.route.data.subscribe((data:{editName:string})=>{
-            this.editName=data.editName;
+        this.route.data.subscribe((data:{crisis:Crisis})=>{
+            this.crisis=data.crisis;
+            this.editName=data.crisis.name;
         });
     }
 
