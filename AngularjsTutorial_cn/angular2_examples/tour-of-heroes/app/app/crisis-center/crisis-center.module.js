@@ -17,6 +17,7 @@ var crisis_center_home_component_1 = require('./crisis-center-home.component');
 var crisis_detail_component_1 = require('./crisis-detail.component');
 var crisis_list_component_1 = require('./crisis-list.component');
 var crisis_service_1 = require('./crisis.service');
+var can_deactive_guarid_crisis_detail_service_1 = require('./can-deactive-guarid-crisis-detail.service');
 var CrisisCenterModule = (function () {
     function CrisisCenterModule() {
     }
@@ -33,7 +34,10 @@ var CrisisCenterModule = (function () {
                 crisis_detail_component_1.CrisisDetailComponent,
                 crisis_list_component_1.CrisisListComponent
             ],
-            providers: [crisis_service_1.CrisisService],
+            providers: [
+                crisis_service_1.CrisisService,
+                can_deactive_guarid_crisis_detail_service_1.CanDeactivateGuardCrisisDetailService
+            ],
             bootstrap: [crisis_center_component_1.CrisisCenterComponent]
         }), 
         __metadata('design:paramtypes', [])

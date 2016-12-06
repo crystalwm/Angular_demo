@@ -3,6 +3,7 @@ import {ActivatedRoute,Params} from '@angular/router';
 import {Location} from '@angular/common';
 import {CrisisService} from './crisis.service';
 import {Crisis} from './crisis';
+import {DialogService} from '../dialog.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ import {Crisis} from './crisis';
          <div><label>id:</label>{{crisis.id}}</div>
          <div>
             <label>name:</label>
-            <input [(ngModel)]="crisis.name" placeholder="name"/>
+            <input [(ngModel)]="editName" placeholder="name"/>
          </div>
          <button (click)="goBack()">Back</button>
       </div>
@@ -22,18 +23,23 @@ import {Crisis} from './crisis';
 export class CrisisDetailComponent implements OnInit{
     crisis:Crisis;
     id:number;
+    editName:string;
     ngOnInit(){
         this.route.params.forEach((params:Params)=>{
             let id=+params['id'];
             this.id=id;
-            this.crisisService.getCrisis(id).then(crisis=>this.crisis=crisis);
+            this.crisisService.getCrisis(id).then(crisis=>{
+                this.crisis=crisis;
+                this.editName=crisis.name;
+            });
         });
     }
 
     constructor(
         private route:ActivatedRoute,
         private location:Location,
-        private crisisService:CrisisService
+        private crisisService:CrisisService,
+        public dialogService:DialogService
     ){}
 
     goBack(){

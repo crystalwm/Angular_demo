@@ -14,6 +14,7 @@ var crisis_list_component_1 = require('./crisis-list.component');
 var crisis_center_component_1 = require('./crisis-center.component');
 var crisis_detail_component_1 = require('./crisis-detail.component');
 var crisis_center_home_component_1 = require('./crisis-center-home.component');
+var can_deactive_guarid_crisis_detail_service_1 = require('./can-deactive-guarid-crisis-detail.service');
 var routes = [
     {
         path: '',
@@ -31,6 +32,7 @@ var routes = [
                     {
                         path: ':id',
                         component: crisis_detail_component_1.CrisisDetailComponent,
+                        canDeactivate: [can_deactive_guarid_crisis_detail_service_1.CanDeactivateGuardCrisisDetailService]
                     },
                     {
                         path: '',

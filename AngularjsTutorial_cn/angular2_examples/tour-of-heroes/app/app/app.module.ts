@@ -10,6 +10,8 @@ import {AdminModule} from './admin/admin.module';
 import {LoginModule} from './login/login.module';
 import {AuthGuardService} from './auth-guard.service';
 import {AuthService} from './auth.service';
+import {CanDeactivateGuardService} from './can-deactive-guard.service';
+import {DialogService} from './dialog.service';
 
 
 
@@ -28,7 +30,9 @@ import {AuthService} from './auth.service';
         ],
     providers:[
         AuthGuardService,
-        AuthService
+        AuthService,
+        CanDeactivateGuardService,
+        DialogService
         ],
     bootstrap:[ AppComponent ]
 })

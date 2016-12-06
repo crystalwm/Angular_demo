@@ -19,6 +19,8 @@ var admin_module_1 = require('./admin/admin.module');
 var login_module_1 = require('./login/login.module');
 var auth_guard_service_1 = require('./auth-guard.service');
 var auth_service_1 = require('./auth.service');
+var can_deactive_guard_service_1 = require('./can-deactive-guard.service');
+var dialog_service_1 = require('./dialog.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -38,7 +40,9 @@ var AppModule = (function () {
             ],
             providers: [
                 auth_guard_service_1.AuthGuardService,
-                auth_service_1.AuthService
+                auth_service_1.AuthService,
+                can_deactive_guard_service_1.CanDeactivateGuardService,
+                dialog_service_1.DialogService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

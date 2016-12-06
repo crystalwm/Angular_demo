@@ -9,17 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var CanDeactivateGuard = (function () {
-    function CanDeactivateGuard() {
+var CanDeactivateGuardCrisisDetailService = (function () {
+    function CanDeactivateGuardCrisisDetailService() {
     }
-    CanDeactivateGuard.prototype.canDeactivate = function (component) {
-        return component.canDeactivate ? component.canDeactivate() : true;
+    CanDeactivateGuardCrisisDetailService.prototype.canDeactivate = function (component, route, state) {
+        console.log(route.params['id']);
+        console.log(state.url);
+        //if the input has no change
+        if (!component.crisis || component.crisis.name == component.editName) {
+            return true;
+        }
+        return component.dialogService.confirm("Discard changes?");
     };
-    CanDeactivateGuard = __decorate([
+    CanDeactivateGuardCrisisDetailService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], CanDeactivateGuard);
-    return CanDeactivateGuard;
+    ], CanDeactivateGuardCrisisDetailService);
+    return CanDeactivateGuardCrisisDetailService;
 }());
-exports.CanDeactivateGuard = CanDeactivateGuard;
-//# sourceMappingURL=test.js.map
+exports.CanDeactivateGuardCrisisDetailService = CanDeactivateGuardCrisisDetailService;
+//# sourceMappingURL=can-deactive-guarid-crisis-detail.service.js.map

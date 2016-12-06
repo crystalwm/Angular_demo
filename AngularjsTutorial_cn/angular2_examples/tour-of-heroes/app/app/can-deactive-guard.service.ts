@@ -10,6 +10,8 @@ export interface CanComponentDeactivate{
 @Injectable()
 export class CanDeactivateGuardService implements CanDeactivate<CanComponentDeactivate>{
     canDeactivate(component:CanComponentDeactivate){
+
+        console.log("canDeactivate has been called");
         return component.canDeactivate?component.canDeactivate():true;
     }
 

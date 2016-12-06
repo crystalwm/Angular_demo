@@ -9,18 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var CanDeactivateGuardService = (function () {
-    function CanDeactivateGuardService() {
+var DialogService = (function () {
+    function DialogService() {
     }
-    CanDeactivateGuardService.prototype.canDeactivate = function (component) {
-        console.log("canDeactivate has been called");
-        return component.canDeactivate ? component.canDeactivate() : true;
+    DialogService.prototype.confirm = function (message) {
+        return new Promise(function (resolve) { return resolve(window.confirm(message || 'Is it OK?')); });
     };
-    CanDeactivateGuardService = __decorate([
+    DialogService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], CanDeactivateGuardService);
-    return CanDeactivateGuardService;
+    ], DialogService);
+    return DialogService;
 }());
-exports.CanDeactivateGuardService = CanDeactivateGuardService;
-//# sourceMappingURL=can-deactive-guard.service.js.map
+exports.DialogService = DialogService;
+//# sourceMappingURL=dialog.service.js.map

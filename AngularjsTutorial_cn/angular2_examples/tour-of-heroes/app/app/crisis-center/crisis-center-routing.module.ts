@@ -4,6 +4,7 @@ import {CrisisListComponent} from './crisis-list.component';
 import {CrisisCenterComponent} from './crisis-center.component';
 import {CrisisDetailComponent} from './crisis-detail.component';
 import {CrisisCenterHomeComponent} from './crisis-center-home.component';
+import {CanDeactivateGuardCrisisDetailService} from './can-deactive-guarid-crisis-detail.service';
 
 
 const routes:Routes=[
@@ -23,6 +24,7 @@ const routes:Routes=[
               {
                 path: ':id',
                 component: CrisisDetailComponent,
+                canDeactivate:[CanDeactivateGuardCrisisDetailService]
               },
               {
                 path: '',
