@@ -14,13 +14,12 @@ var admin_dashboard_component_1 = require('./admin-dashboard.component');
 var manage_crisises_component_1 = require('./manage-crisises.component');
 var manage_heroes_component_1 = require('./manage-heroes.component');
 var admin_component_1 = require('./admin.component');
-var auth_guard_service_1 = require('../auth-guard.service');
 var routes = [{
-        path: 'admin',
+        path: '',
         component: admin_component_1.AdminComponent,
         children: [{
                 path: '',
-                canActivateChild: [auth_guard_service_1.AuthGuardService],
+                //      canActivateChild:[AuthGuardService],
                 children: [
                     {
                         path: 'crisises',

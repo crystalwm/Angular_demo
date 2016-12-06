@@ -7,11 +7,11 @@ import {AdminComponent} from './admin.component';
 import {AuthGuardService} from '../auth-guard.service';
 
 const routes:Route[]=[{
-        path:'admin',
+        path:'',
         component:AdminComponent,
         children:[{
             path:'',
-            canActivateChild:[AuthGuardService],
+      //      canActivateChild:[AuthGuardService],
             children:[
                 {
                     path:'crisises',

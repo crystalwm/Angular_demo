@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
 var admin_component_1 = require('./admin.component');
 var admin_routing_module_1 = require('./admin-routing.module');
 var manage_crisises_component_1 = require('./manage-crisises.component');
@@ -21,7 +20,6 @@ var AdminModule = (function () {
     AdminModule = __decorate([
         core_1.NgModule({
             imports: [
-                platform_browser_1.BrowserModule,
                 admin_routing_module_1.AdminRoutingModule
             ],
             declarations: [

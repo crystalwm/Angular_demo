@@ -3,29 +3,13 @@
         'app': 'app/app',
         '@angular': 'node_modules/@angular',
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-        'rxjs': 'node_modules/rxjs',
-        'appmulti':'app/appmultimain',
-        'appmultiheroes':'app/Multiple-Components',
-        'appheroservice':'app/HeroService',
-        'appheroroute':'app/HeroRoute'
+        'rxjs': 'node_modules/rxjs'
     };
 
     var packages = {
         'app': {
             main: 'main.js',
             defaultExtension: 'js'
-        },
-        'hero':{
-            defaultExtension: 'js'
-        },
-        'crisis-center':{
-            defaultExtension: 'js'
-        },
-        'admin':{
-            defaultExtension: 'js'
-        },
-        'login':{
-            defaultExtension:'js'
         },
         'rxjs': {
             defaultExtension: 'js'

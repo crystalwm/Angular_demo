@@ -12,7 +12,6 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var hero_component_1 = require('./hero/hero.component');
 var crisis_center_component_1 = require('./crisis-center/crisis-center.component');
-var admin_component_1 = require('./admin/admin.component');
 var login_component_1 = require('./login/login.component');
 ;
 var routes = [
@@ -26,7 +25,7 @@ var routes = [
     },
     {
         path: 'admin',
-        component: admin_component_1.AdminComponent
+        loadChildren: 'app/admin/admin.module#AdminModule'
     },
     {
         path: 'login',
