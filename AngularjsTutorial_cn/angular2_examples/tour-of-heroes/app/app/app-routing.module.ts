@@ -2,7 +2,8 @@ import { NgModule }      from '@angular/core';
 import {RouterModule,Routes} from '@angular/router';
 import {HeroComponent} from './hero/hero.component';
 import {CrisisCenterComponent} from './crisis-center/crisis-center.component';
-import {LoginComponent} from './login/login.component';;
+import {LoginComponent} from './login/login.component';
+import{AuthGuardService} from './auth-guard.service';
 
 
 
@@ -17,7 +18,8 @@ const routes:Routes=[
     },
     {
         path:'admin',
-        loadChildren:'app/admin/admin.module#AdminModule'
+        loadChildren:'app/admin/admin.module#AdminModule',
+        canLoad:[AuthGuardService]
     },
     {
         path:'login',

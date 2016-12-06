@@ -32,6 +32,11 @@ var AuthGuardService = (function () {
         var url = futureRouteState.url;
         return this.checkLogin(url);
     };
+    AuthGuardService.prototype.canLoad = function (route) {
+        console.log("enter canLoad");
+        var url = "/" + route.path;
+        return this.checkLogin(url);
+    };
     AuthGuardService.prototype.canActivateChild = function (futureRoute, futureRouteState) {
         return this.canActivate(futureRoute, futureRouteState);
     };

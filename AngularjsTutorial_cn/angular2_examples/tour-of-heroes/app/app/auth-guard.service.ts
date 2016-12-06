@@ -3,13 +3,14 @@ import {CanActivate,
         CanActivateChild,
         ActivatedRouteSnapshot,
         RouterStateSnapshot,
-        NavigationExtras
+        NavigationExtras,
+        CanLoad,Route
         } from '@angular/router';
 import {AuthService} from "./auth.service";
 import {Router} from "@angular/router";
 
 @Injectable()
-export class AuthGuardService implements CanActivate,CanActivateChild{
+export class AuthGuardService implements CanActivate,CanActivateChild,CanLoad{
     constructor(
         private router:Router,
         private authService:AuthService
@@ -33,6 +34,14 @@ export class AuthGuardService implements CanActivate,CanActivateChild{
         futureRouteState:RouterStateSnapshot
     ):boolean{
         let url=futureRouteState.url;
+        return this.checkLogin(url);
+    }
+
+    canLoad(
+        route:Route
+    ):boolean{
+        console.log("enter canLoad");
+        let url=`/${route.path}`;
         return this.checkLogin(url);
     }
 

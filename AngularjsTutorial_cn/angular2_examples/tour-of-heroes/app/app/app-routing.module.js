@@ -13,7 +13,7 @@ var router_1 = require('@angular/router');
 var hero_component_1 = require('./hero/hero.component');
 var crisis_center_component_1 = require('./crisis-center/crisis-center.component');
 var login_component_1 = require('./login/login.component');
-;
+var auth_guard_service_1 = require('./auth-guard.service');
 var routes = [
     {
         path: 'heroes',
@@ -25,7 +25,8 @@ var routes = [
     },
     {
         path: 'admin',
-        loadChildren: 'app/admin/admin.module#AdminModule'
+        loadChildren: 'app/admin/admin.module#AdminModule',
+        canLoad: [auth_guard_service_1.AuthGuardService]
     },
     {
         path: 'login',
